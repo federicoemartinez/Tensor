@@ -9,16 +9,16 @@ jobs:
         shell: cmd
     strategy:
       matrix:
-          version: ["8.0"]
+          version: ["8.0", "8.1"]
           arch: [x64, x86]
-          ts: [ts, nts]
+          ts: [ts]
     runs-on: windows-2019
     steps:
       - name: Checkout tensor
         uses: actions/checkout@v2
       - name: Setup PHP
         id: setup-php
-        uses: cmb69/setup-php-sdk@v0.2
+        uses: cmb69/setup-php-sdk@v0.5
         with:
           version: ${{matrix.version}}
           arch: ${{matrix.arch}}
