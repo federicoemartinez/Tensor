@@ -11,7 +11,7 @@ jobs:
       matrix:
           version: ["8.0"]
           arch: [x64, x86]
-          ts: [ts]
+          ts: [ts, nts]
     runs-on: windows-2019
     steps:
       - name: Checkout tensor
