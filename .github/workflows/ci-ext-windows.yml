@@ -30,8 +30,8 @@ jobs:
           toolset: ${{steps.setup-php.outputs.toolset}}
       - name: Download dependencies
         run: |
-          curl -LO https://github.com/xianyi/OpenBLAS/releases/download/v0.3.20/OpenBLAS-0.3.20-x64.zip
-          7z x OpenBLAS-0.3.20-x64.zip -odeps
+          curl -LO https://github.com/xianyi/OpenBLAS/releases/download/v0.3.19/OpenBLAS-0.3.19-x64.zip
+          7z x OpenBLAS-0.3.19-x64.zip -odeps
       - name: phpize
         run: cd ext && phpize
       - name: configure
